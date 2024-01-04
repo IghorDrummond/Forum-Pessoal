@@ -1,0 +1,180 @@
+/* Estilo da Pagina */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #121214 !important;
+	position: relative;
+}
+
+/*Fontes Personalizados */
+@font-face{
+	font-family: 'Inter Regular';
+	src: url('../fonts/Inter-Regular.woff');
+}
+@font-face{
+	font-family: 'LexendDeca Regular';
+	src: url('../fonts/LexendDeca-Regular.woff');
+}
+@font-face{
+	font-family: '';
+	src: url('../fonts/');
+}
+
+/* Cabeçalho */
+header{
+	font-family: 'Inter Regular';
+	height: 20vh;
+	color: white;
+	background-color: #17171A;
+	z-index: 1;
+}
+header span{
+	color: #E07B67;
+}
+header input{
+	width: 50%;
+	height: 40px;
+	border-radius: 60px;
+	border: none;
+	color: white;
+	font-weight: bold;
+	background: #252529 url('../img/lupa.png') no-repeat center left;
+	background-size: 45px;
+}
+
+/* Conteudos */
+main{
+	width: 50%;
+	z-index: 0;
+}
+section{
+	border: 1px solid white;
+	border-radius: 15px;
+	margin-top: 25px;
+	cursor: pointer;
+}
+section h4{
+	color: white;
+}
+section p{
+	color: #AFABB6;
+}
+.botao_coracao{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: url('../img/coracao.png') no-repeat center;
+	background-size: 100%;
+	border: none;
+}
+.adiciona{
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+	background-color: #252529;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+
+/* Tela de Adiciona Forum */
+#tela_adiciona{
+	width: 90vw;
+	height: 90vh;
+	margin: auto;
+	background-color: #252529;
+	color: white;
+	font-weight: bold;
+	border: 2px solid white;
+	z-index: 2;
+	position: fixed;
+	display: none;
+	-webkit-animation: surgi 1s;
+	        animation: surgi 1s;
+	top: 5%;
+	left: 5%;
+}
+#botao_fecha{
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+#descricao{
+	width: 98%;
+	height: 15vh;
+	max-height: 63vh;
+}
+
+.verde{
+	width: 100vw;
+	height: 100vh;
+	background-color: green;
+}
+fieldset{
+	text-align: left;
+}
+fieldset input{
+	width: 85%;
+	border-radius: 20px;
+}
+fieldset div{
+	text-align: center;
+}
+
+/*Cores Tempo */
+time{
+	color: #E07B67;
+	font-size: 0.8em;
+}
+
+/* Hovers */
+.adiciona:hover{
+	-webkit-transform: scale(105%);
+	    -ms-transform: scale(105%);
+	        transform: scale(105%);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+/* Animações */
+
+@-webkit-keyframes surgi{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes surgi{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+
+/* Dispositivos Mobiles ou HDs */
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+@media (max-width: 575.98px) {
+	main{
+		width: 90%;
+		margin: auto;
+	}
+}
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	main{
+		width: 90%;
+		margin: auto;
+	}
+}

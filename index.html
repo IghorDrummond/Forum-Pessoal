@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Normalize CSS -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!-- Estilo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Favicon -->
+		<link rel="icon" href="img/favicon.png">
+		<!-- BootStrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!-- HTML5Shiv -->
+		<!--[if lt IE 9]>
+				    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+				<![endif]-->
+
+		<title>Blog Pessoal - Ighor Drummond</title>
+	</head>
+
+	<body>
+		<header class="text-center p-2 h-20"><!-- Inicio do Cabeçalho -->
+			<h1 class="p-3"><span>Blog</span>Pessoal</h1>
+			<input onchange="" class="pl-5" type="text" name="" placeholder="Pesquise no Blog...">
+		</header><!-- Fim do Cabeçalho -->
+
+		<div id="tela_adiciona"><!-- Inicio da Tela de Adiciona -->
+				<div class="row m-auto p-1 w-100">
+					<div class="col-6">
+						<h5>Insira os Valores Abaixo: </h5>
+					</div>
+					<div class="col-6">
+						<button id="botao_fecha" class="d-block ml-auto" onclick="Cancela()">X</button>
+					</div>
+				</div>
+
+			<form class="text-center w-100">
+				<fieldset>
+					<legend>Titulo</legend>
+					<div>
+						<label for="Titulo">Insira o Titulo:</label>
+						<input onchange="ValidaVazio('1')" class="pl-1" type="text" name="Titulo">
+					</div>									
+				</fieldset>
+
+				<fieldset>
+					<legend>Descrição</legend>
+					<div>
+						<label for="Descricao">Insira uma Descrição: </label>
+						<textarea onchange="ValidaVazio('2')" class="pl-1" name="Descricao" id="descricao"></textarea>
+					</div>
+				</fieldset>
+			</form>	
+
+			<footer>
+				<button onclick="Postar()" id="postar" class="btn btn-block btn-success disabled" disabled="disabled">Postar</button>
+			</footer>
+		</div><!-- Fim da Tela de Adiciona -->
+
+		<main id="Conteudo" class="m-md-auto"><!-- Inicio dos Conteúdos -->
+
+			<section id="0"><!-- Iniciod da Section -->
+				<div class="container"><!-- Inicio do Container -->
+					<div class="row"><!-- Inicio da Linha -->
+
+						<div class="col-6"><!-- Inicio da Primeira Coluna -->
+							<time>17 de Ago - 2024</time>
+						</div><!-- Fim da Primeira Coluna -->
+
+						<div class="col-6"><!-- Inicio da Segunda Coluna -->
+							<button onclick="favorito(0)" class="botao_coracao d-block ml-auto"></button>
+						</div><!-- Fim da Segunda Coluna -->
+					</div><!-- Fim da Linha -->
+
+					<h4>O que é linguagem de programação? Conheça as principais</h4>
+					<p>
+						Uma das mais populares vertentes da tecnologia da informação, a área de programação segue tendo muita demanda de trabalho justamente pela velocidade com que dispositivos tecnológicos vêm avançando.
+					</p>
+				</div><!-- Fim do Container -->
+			</section><!-- Fim da Section -->
+
+			<section id="1"><!-- Iniciod da Section -->
+				<div class="container"><!-- Inicio do Container -->
+					<div class="row"><!-- Inicio da Linha -->
+
+						<div class="col-6"><!-- Inicio da Primeira Coluna -->
+							<time>12 de jul - 2024</time>
+						</div><!-- Fim da Primeira Coluna -->
+
+						<div class="col-6"><!-- Inicio da Segunda Coluna -->
+							<button onclick="favorito(1)" class="botao_coracao d-block ml-auto"></button>
+						</div><!-- Fim da Segunda Coluna -->
+					</div><!-- Fim da Linha -->
+
+					<h4>GitHub agora permite fazer login sem precisar de senha</h4>
+					<p>
+						O GitHub anunciou nesta quarta-feira (12) o acesso a partir das passkeys, método de autenticação sem senhas. A novidade está disponível em uma versão beta pública e pode substituir a autenticação em dois fatores.
+					</p>
+				</div><!-- Fim do Container -->
+			</section><!-- Fim da Section -->		
+
+			<section id="2"><!-- Inicio da Section -->
+				<div class="container"><!-- Inicio do Container -->
+					<div class="row"><!-- Inicio da Linha -->
+
+						<div class="col-6"><!-- Inicio da Primeira Coluna -->
+							<time>21 de jun - 2024</time>
+						</div><!-- Fim da Primeira Coluna -->
+
+						<div class="col-6"><!-- Inicio da Segunda Coluna -->
+							<button onclick="favorito(2)" class="botao_coracao d-block ml-auto"></button>
+						</div><!-- Fim da Segunda Coluna -->
+					</div><!-- Fim da Linha -->
+
+					<h4>Por que os hiperlinks são azuis em sua maioria?</h4>
+					<p>
+						Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hiperlinks – uma palavra ou termo clicável que direciona o leitor.
+					</p>
+				</div><!-- Fim do Container -->
+			</section><!-- Fim da Section -->					
+
+			<button onclick="AdicionaSecao()" class="d-block w-100 border border-light mt-3 adiciona">+</button>
+		</main><!-- Fim dos Conteúdos -->
+
+		<!-- Script do Site -->
+		<script type="text/javascript" src="js/script.js"></script>
+
+		<!-- JavaScript (Opcional) -->
+		<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+	</body>
+
+</html>
